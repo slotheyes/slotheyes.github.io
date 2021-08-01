@@ -9,8 +9,8 @@
 <span id="setMe" class="dot"></span>
 <br>
 <button id="Green" onclick="Green()" value="Green" type="button">Green</button>
-<button id="LightBlue" onclick="LightBlue()" value="Light Blue" type="button">Light Blue</button>
-<button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
+<button id="LightBlue" onclick="LightBlue()" value="LightBlue" type="button">Light Blue</button>
+<button id="DarkBlue" onclick="DarkBlue()" value="DarkBlue" type="button">Dark Blue</button>
 <br>
 <span id="resutls" ></span>
 <br>
@@ -71,7 +71,7 @@ Miliseconds :<span id="miliseconds"></span>
     }
 
     function LightBlue() {
-      var x = document.getElementById("Green").value;
+      var x = document.getElementById("LightBlue").value;
       if(x== guessType){
             
             document.getElementById("resutls").textContent="Correct";
@@ -82,7 +82,7 @@ Miliseconds :<span id="miliseconds"></span>
     }
 
     function DarkBlue() {
-      var x = document.getElementById("Green").value;
+      var x = document.getElementById("DarkBlue").value;
       if(x== guessType){
             
             document.getElementById("resutls").textContent="Correct";
