@@ -5,10 +5,29 @@
 <h1>My First Heading</h1>
 
 <p>My first paragraph.</p>
+<button id="Green" onclick="Green()" value="Green" type="button">Green</button>
+<button id="LightBlue" onclick="LightBlue()" value="Light Blue" type="button">Light Blue</button>
+<button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
 
+<script>
+    function Green() {
+      var x = document.getElementById("Green").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+</script>
+<script>
+    function LightBlue() {
+      var x = document.getElementById("Green").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+</script>
+<script>
+    function DarkBlue() {
+      var x = document.getElementById("Green").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+</script>
 </body>
 
-<button type="button">Green</button>
-<button type="button">Light Blue</button>
-<button type="button">Dark Blue</button>
+
 </html>
