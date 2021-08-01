@@ -8,14 +8,14 @@
 <button id="Green" onclick="Green()" value="Green" type="button">Green</button>
 <button id="LightBlue" onclick="LightBlue()" value="Light Blue" type="button">Light Blue</button>
 <button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
-<span id="minutes"></span>:<span id="seconds"></span>
+<span id="seconds"></span>:<span id="miliseconds"></span>
 <script>
     function componentToHex(c) {
-        var hex = c.toString(16);
+        var hex = Math.floor(c).toString(16);
         return hex.length == 1 ? "0" + hex : hex;
     }
     function rgbToHex(r, g, b) {
-        return "#" + Math.floor(componentToHex(r)) + Math.floor(componentToHex(g)) + Math.floor(componentToHex(b));
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
     var guessType = "";
     const setBg = () => {
@@ -69,9 +69,9 @@
     var sec = 0;
     function pad ( val ) { return val > 9 ? val : "0" + val; }
     setInterval( function(){
-        document.getElementById("seconds").innerHTML=pad(++sec%60);
-        document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
-    }, 1000);
+        document.getElementById("miliseconds").innerHTML=pad(++sec%60);
+        document.getElementById("seconds").innerHTML=pad(parseInt(sec/60,10));
+    }, 100);
   </script>
 </body>
 
