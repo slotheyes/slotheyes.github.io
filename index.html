@@ -5,11 +5,15 @@
 <h1>Colour test</h1>
 
 <p>Select the option you think matches the options below</p>
+<center>
 <span id="setMe" class="dot"></span>
+<br>
 <button id="Green" onclick="Green()" value="Green" type="button">Green</button>
 <button id="LightBlue" onclick="LightBlue()" value="Light Blue" type="button">Light Blue</button>
 <button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
+<br>
 <span id="seconds"></span>:<span id="miliseconds"></span>
+</center>
 <script>
     function componentToHex(c) {
         var hex = Math.floor(c).toString(16);
@@ -27,22 +31,24 @@
         g=0;
         b= (Math.random() * 90) + 100;
         randomColor = rgbToHex(r,g,b);
-        guessType = "LightBlue"
+        guessType = "LightBlue";
     }else if (rndInt == 2) {
         
         r=0;
         g=0;
         b=(Math.random() * 90) + 100;
         randomColor = rgbToHex(r,g,b);
-        guessType = "DarkBlue"
+        guessType = "DarkBlue";
     }else if (rndInt == 3) {
         
         r=0;
         g = (Math.random() * 90) + 100;
         b=0;
         randomColor = rgbToHex(r,g,b);
-        guessType = "Green"
+        guessType = "Green";
     }
+
+    document.getElementById("setMe").style.background-color = randomColor; 
     document.getElementById("setMe").style.color = randomColor;
 
 }
@@ -50,19 +56,26 @@
     setBg();
     function Green() {
       var x = document.getElementById("Green").value;
-      document.getElementById("demo").innerHTML = x;
+      if(x== guessType){
+
+      }
+      
     }
 </script>
 <script>
     function LightBlue() {
       var x = document.getElementById("Green").value;
-      document.getElementById("demo").innerHTML = x;
+      if(x== guessType){
+          
+        }
     }
 </script>
 <script>
     function DarkBlue() {
       var x = document.getElementById("Green").value;
-      document.getElementById("demo").innerHTML = x;
+      if(x== guessType){
+          
+        }
     }
 </script>
 <script>
@@ -83,6 +96,7 @@
       display: inline-block;
     }
     </style>
+    
 </body>
 
 
