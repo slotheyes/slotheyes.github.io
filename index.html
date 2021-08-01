@@ -12,6 +12,7 @@
 <button id="LightBlue" onclick="LightBlue()" value="Light Blue" type="button">Light Blue</button>
 <button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
 <br>
+<span id="resutls" ></span>
 <span id="seconds"></span>:<span id="miliseconds"></span>
 </center>
 <script>
@@ -57,23 +58,35 @@
     function Green() {
       var x = document.getElementById("Green").value;
       if(x== guessType){
-            clearInterval(intID);
+            
+            document.getElementById("resutls").textContent="Correct";
+      }else{
+        document.getElementById("resutls").textContent="Incorrect";
       }
+      clearInterval(intID);
       
     }
 
     function LightBlue() {
       var x = document.getElementById("Green").value;
       if(x== guessType){
-            clearInterval(intID);
-        }
+            
+            document.getElementById("resutls").textContent="Correct";
+        }else{
+            document.getElementById("resutls").textContent="Incorrect";
+      }
+        clearInterval(intID);
     }
 
     function DarkBlue() {
       var x = document.getElementById("Green").value;
       if(x== guessType){
-            clearInterval(intID);
+            
+            document.getElementById("resutls").textContent="Correct";
+        }else{
+            document.getElementById("resutls").textContent="Incorrect";
         }
+        clearInterval(intID);
     }
     var intID = 0;
     var sec = 0;
