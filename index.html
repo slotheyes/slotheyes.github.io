@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<center>
 <h1>Colour test</h1>
 
 <p>Select the option you think matches the options below</p>
-<center>
+
 <span id="setMe" class="dot"></span>
 <br>
 <button id="Green" onclick="Green()" value="Green" type="button">Green</button>
@@ -52,36 +52,33 @@
     document.getElementById("setMe").style.color = randomColor;
 
 }
-
+    
     setBg();
     function Green() {
       var x = document.getElementById("Green").value;
       if(x== guessType){
-
+            clearInterval(intID);
       }
       
     }
-</script>
-<script>
+
     function LightBlue() {
       var x = document.getElementById("Green").value;
       if(x== guessType){
-          
+            clearInterval(intID);
         }
     }
-</script>
-<script>
+
     function DarkBlue() {
       var x = document.getElementById("Green").value;
       if(x== guessType){
-          
+            clearInterval(intID);
         }
     }
-</script>
-<script>
+    var intID = 0;
     var sec = 0;
     function pad ( val ) { return val > 9 ? val : "0" + val; }
-    setInterval( function(){
+    intID = setInterval( function(){
         document.getElementById("miliseconds").innerHTML=pad(++sec%60);
         document.getElementById("seconds").innerHTML=pad(parseInt(sec/60,10));
     }, 100);
