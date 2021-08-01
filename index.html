@@ -10,26 +10,30 @@
 <button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
 
 <script>
+    var guessType = "";
     const setBg = () => {
     const rndInt = Math.floor(Math.random() * 3) + 1;
     var randomColor = 0;
-    if(rndInt = 1){
+    if(rndInt == 1){
         r=0;
         g=0;
         b= (Math.random() * 90) + 100;
         randomColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-    }else if (rndInt = 2) {
+        guessType = "LightBlue"
+    }else if (rndInt == 2) {
         
         r=0;
         g=0;
         b=(Math.random() * 90) + 100;
         randomColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-    }else if (rndInt = 3) {
+        guessType = "DarkBlue"
+    }else if (rndInt == 3) {
         
         r=0;
         g = (Math.random() * 90) + 100;
         b=0;
         randomColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+        guessType = "Green"
     }
     
     document.body.style.backgroundColor = "#" + randomColor;
