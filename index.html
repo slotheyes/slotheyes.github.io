@@ -11,9 +11,30 @@
 
 <script>
     const setBg = () => {
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
-  document.body.style.backgroundColor = "#" + randomColor;
-  color.innerHTML = "#" + randomColor;
+    const rndInt = Math.floor(Math.random() * 3) + 1;
+    var randomColor = 0;
+    if(rndInt = 1){
+        
+        r=0;
+        g=0;
+        b= (Math.random() * 90) + 100;
+        color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    }else randomColor (rndInt = 2) {
+        
+        r=0;
+        g=0;
+        b=(Math.random() * 90) + 100;
+        randomColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    }else if (rndInt = 3) {
+        
+        r=0;
+        g = (Math.random() * 90) + 100;
+        b=0;
+        randomColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    }
+    
+    document.body.style.backgroundColor = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
 }
 
     setBg();
