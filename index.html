@@ -2,9 +2,10 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
+<h1>Colour test</h1>
 
-<p>My first paragraph.</p>
+<p>Select the option you think matches the options below</p>
+<span id="setMe" class="dot"></span>
 <button id="Green" onclick="Green()" value="Green" type="button">Green</button>
 <button id="LightBlue" onclick="LightBlue()" value="Light Blue" type="button">Light Blue</button>
 <button id="DarkBlue" onclick="DarkBlue()" value="Dark Blue" type="button">Dark Blue</button>
@@ -42,9 +43,8 @@
         randomColor = rgbToHex(r,g,b);
         guessType = "Green"
     }
-    
-    document.body.style.backgroundColor = randomColor;
-    color.innerHTML = randomColor;
+    document.getElementById("setMe").style.color = randomColor;
+
 }
 
     setBg();
@@ -73,6 +73,16 @@
         document.getElementById("seconds").innerHTML=pad(parseInt(sec/60,10));
     }, 100);
   </script>
+
+<style>
+    .dot {
+      height: 250px;
+      width: 250px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    </style>
 </body>
 
 
