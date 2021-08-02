@@ -69,6 +69,7 @@ Miliseconds :<span id="miliseconds"></span>
         document.getElementById("resutls").textContent="Incorrect";
       }
       clearInterval(intID);
+      reset1 = 1;
       
     }
 
@@ -81,6 +82,7 @@ Miliseconds :<span id="miliseconds"></span>
             document.getElementById("resutls").textContent="Incorrect";
       }
         clearInterval(intID);
+        reset1 = 1;
     }
 
     function DarkBlue() {
@@ -92,8 +94,9 @@ Miliseconds :<span id="miliseconds"></span>
             document.getElementById("resutls").textContent="Incorrect";
         }
         clearInterval(intID);
+        reset1 = 1;
     }
-    
+    var reset1 = 0;
     var sec = 0;
     var sec1 = 0;
     function pad ( val ) { return val > 9 ? val : "0" + val; }
@@ -107,6 +110,8 @@ Miliseconds :<span id="miliseconds"></span>
         document.getElementById("seconds").innerHTML=pad(sec1);
     }, 1);
     function reset(){
+        if(reset1 == 1){
+        reset1 = 0;
         var sec = 0;
         var sec1 = 0;
         setBg();
@@ -119,7 +124,9 @@ Miliseconds :<span id="miliseconds"></span>
         }
         document.getElementById("miliseconds").innerHTML=pad(sec%1000);
         document.getElementById("seconds").innerHTML=pad(sec1);
-    }, 1);}
+        }, 1);
+    }
+    }
   </script>
 
 <style>
