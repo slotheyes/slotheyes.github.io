@@ -93,10 +93,16 @@ Miliseconds :<span id="miliseconds"></span>
     }
     var intID = 0;
     var sec = 0;
+    var sec1 = 0;
     function pad ( val ) { return val > 9 ? val : "0" + val; }
     intID = setInterval( function(){
+        ++sec;
+        if(sec%1000 == 0){
+            sec = 0
+            sec1 = 0
+        }
         document.getElementById("miliseconds").innerHTML=pad(++sec%1000);
-        document.getElementById("seconds").innerHTML=pad(parseInt(sec/60,10));
+        document.getElementById("seconds").innerHTML=pad(parseInt(sec1,10));
     }, 1);
   </script>
 
