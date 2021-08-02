@@ -58,7 +58,7 @@ Miliseconds :<span id="miliseconds"></span>
     document.getElementById("setMe").style.color = randomColor;
 
 }
-    
+    var intID = 0;
     setBg();
     function Green() {
       var x = document.getElementById("Green").value;
@@ -93,7 +93,7 @@ Miliseconds :<span id="miliseconds"></span>
         }
         clearInterval(intID);
     }
-    var intID = 0;
+    
     var sec = 0;
     var sec1 = 0;
     function pad ( val ) { return val > 9 ? val : "0" + val; }
@@ -107,7 +107,6 @@ Miliseconds :<span id="miliseconds"></span>
         document.getElementById("seconds").innerHTML=pad(sec1);
     }, 1);
     function reset(){
-        intID = 0;
         var sec = 0;
         var sec1 = 0;
         setBg();
