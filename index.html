@@ -101,7 +101,7 @@ Miliseconds :<span id="miliseconds"></span>
             sec = 0
             ++sec1; 
         }
-        document.getElementById("miliseconds").innerHTML=pad(++sec%1000);
+        document.getElementById("miliseconds").innerHTML=pad(sec%1000);
         document.getElementById("seconds").innerHTML=pad(sec1);
     }, 1);
   </script>
