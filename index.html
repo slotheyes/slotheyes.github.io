@@ -107,10 +107,11 @@ Miliseconds :<span id="miliseconds"></span>
         document.getElementById("seconds").innerHTML=pad(sec1);
     }, 1);
     function reset(){
-        var intID = 0;
+        intID = 0;
         var sec = 0;
         var sec1 = 0;
         setBg();
+        document.getElementById("resutls").textContent="";
         intID = setInterval( function(){
         ++sec;
         if(sec%1000 == 0){
