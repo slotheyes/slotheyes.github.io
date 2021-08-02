@@ -99,7 +99,7 @@ Miliseconds :<span id="miliseconds"></span>
         ++sec;
         if(sec%1000 == 0){
             sec = 0
-            sec1 = 0
+            ++;sec1 
         }
         document.getElementById("miliseconds").innerHTML=pad(++sec%1000);
         document.getElementById("seconds").innerHTML=pad(parseInt(sec1,10));
