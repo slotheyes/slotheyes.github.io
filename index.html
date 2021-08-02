@@ -6,7 +6,7 @@
 
 <p>Select the option you think matches the options below</p>
 
-<span id="setMe" class="dot"></span>
+<span id="setMe" class="dot" onclick="reset()"></span>
 <br>
 <button id="Green" onclick="Green()" value="Green" type="button">Green</button>
 <button id="LightBlue" onclick="LightBlue()" value="LightBlue" type="button">Light Blue</button>
@@ -19,6 +19,8 @@ Seconds :<span id="seconds"></span>
 Miliseconds :<span id="miliseconds"></span>
 </center>
 <script>
+    
+    }
     function componentToHex(c) {
         var hex = Math.floor(c).toString(16);
         return hex.length == 1 ? "0" + hex : hex;
@@ -96,6 +98,20 @@ Miliseconds :<span id="miliseconds"></span>
     var sec1 = 0;
     function pad ( val ) { return val > 9 ? val : "0" + val; }
     intID = setInterval( function(){
+        ++sec;
+        if(sec%1000 == 0){
+            sec = 0
+            ++sec1; 
+        }
+        document.getElementById("miliseconds").innerHTML=pad(sec%1000);
+        document.getElementById("seconds").innerHTML=pad(sec1);
+    }, 1);
+    function reset(){
+        var intID = 0;
+        var sec = 0;
+        var sec1 = 0;
+        setBg();
+        intID = setInterval( function(){
         ++sec;
         if(sec%1000 == 0){
             sec = 0
